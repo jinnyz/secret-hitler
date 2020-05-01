@@ -15,7 +15,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       
-    - name: install app
+    - uses: actions/setup-node@v1.4.2
+      
+    - name: install dependencies
       run: cd client && npm install
 
     - name: lint
