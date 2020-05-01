@@ -1,0 +1,28 @@
+name: client
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+    paths:
+      - 'client/*'
+      
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: install app
+      run: cd client && npm install
+
+    - name: lint
+      run: npm run lint
+
+    - name: test
+      run: npm run test
+      
+    - name: build
+      run: npm run build
