@@ -20,7 +20,8 @@ module.exports = {
             'no-plusplus': 'off',
             'no-nested-ternary': 'off',
             'comma-dangle': ['error','never'],
-            'no-underscore-dangle': 'off'
+            'no-underscore-dangle': 'off',
+            'jsx-quotes': ['error', 'prefer-single']
           }
         },
       },
