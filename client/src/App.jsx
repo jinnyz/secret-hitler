@@ -1,11 +1,16 @@
-import { hot } from 'react-hot-loader';
 import React from 'react';
-import styles from './App.module.scss';
+import { hot } from 'react-hot-loader';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './routes';
+import store from './store';
 
 const App = () => (
-  <div className={styles.App}>
-    <h1>hello world</h1>
-  </div>
+  <Provider store={store}>
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
+  </Provider>
 );
 
 export default hot(module)(App);
