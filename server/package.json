@@ -2,9 +2,14 @@
   "name": "server",
   "version": "0.0.0",
   "private": true,
+<<<<<<< HEAD
   "main": "src/app.js",
   "scripts": {
     "start": "node src/app.js",
+=======
+  "scripts": {
+    "start": "node src/bin/www",
+>>>>>>> ba05ea334d7aa653d84e502eae83bc9b4ca6cd00
     "test": "mocha"
   },
   "dependencies": {

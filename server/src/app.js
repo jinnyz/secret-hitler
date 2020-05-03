@@ -8,8 +8,15 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+<<<<<<< HEAD
 const port = 3000;
 app.listen(port, () => console.log("Listening on port 3000"));
+=======
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+>>>>>>> ba05ea334d7aa653d84e502eae83bc9b4ca6cd00
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -31,7 +38,13 @@ app.use(function(err, req, res, next) {
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
+<<<<<<< HEAD
   res.status(err.status || 500).send();
+=======
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
+>>>>>>> ba05ea334d7aa653d84e502eae83bc9b4ca6cd00
 });
 
 module.exports = app;
