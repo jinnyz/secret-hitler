@@ -8,8 +8,6 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
-const port = 3000;
-app.listen(port, () => console.log("Listening on port 3000"));
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -34,4 +32,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500).send();
 });
 
-module.exports = app;
+const port = 3000;
+app.listen(port, () => console.log("Listening on port 3000"));
